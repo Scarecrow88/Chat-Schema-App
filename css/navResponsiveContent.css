@@ -1,0 +1,143 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: 'Segoe UI Light';
+    src: url('../font/segoe-ui-light.ttf');
+}
+.bodybox {
+    padding-top: 90px;
+    font-family: 'Segoe UI Light';
+    background: linear-gradient(90deg, rgba(106,106,106,1) 26%, rgba(46,46,101,1) 49%, rgba(169,204,212,1) 78%);
+}
+.bodybox::-webkit-scrollbar {
+    width: 10px;
+}
+.bodybox::-webkit-scrollbar-track {
+    background-color: #2BCAC8;;
+    border-radius: 5px;
+}
+.bodybox::-webkit-scrollbar-thumb {
+    background-color: #1B3A4B;
+    border-radius: 5px;
+}
+.navheader {
+    height: 80px;
+    background-color: #0B525B;
+    box-shadow: 0 3px 18px black;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+.navbox {
+    margin-left: 40px;
+    display: flex;
+    justify-content: space-between;
+    max-width: 1292px;
+}
+.navlogo, .navmenuitem a {
+    color: #2BCAC8;
+    text-decoration: none;
+}
+.navmenu {
+    margin-right: 40px;
+    display: flex;
+    list-style: none;
+}
+.navmenuitem {
+    width: max-content;
+    margin: 0 10px;
+    font-size: 18px;
+    line-height: 80px;
+}
+.navmenuitem a {
+    padding: 15px 20px;
+    border-radius: 10px;
+}
+.navmenuitem a:hover {
+    background-color: #1B3A4B;
+    transition: 0.5s;
+}
+.navlogo {
+    font-size: 30px;
+    font-weight: bold;
+    padding: 0 40px;
+    line-height: 80px;
+}
+.navtoggle {
+    height: 60px;
+    padding: 10px 20px;
+    line-height: 60px;
+    background: none;
+    border: none;
+    display: none;
+}
+.navtoggle svg {
+    width: 30px;
+    height: 30px;
+}
+@media screen and (max-width: 1093px) {
+    .navbox {
+        margin-left: 10px;
+    }
+    .navlogo {
+        font-size: 23px;
+    }
+}
+@media screen and (max-width: 966px) {
+    .navbox {
+        margin-left: 10px;
+    }
+    .navlogo {
+        font-size: 23px;
+        padding: 28px 24px;
+        line-height: 25px;
+    }
+}
+@media screen and (max-width: 768px) {
+    .navheader {
+        height: 60px;
+    }
+    .navlogo {
+        height: 60px;
+        font-size: 25px;
+        padding: 0 20px;
+        line-height: 60px;
+    }
+    .navmenu {
+        width: 100%;
+        padding: 20px 0;
+        align-items: center;
+        margin-right: 20px;
+        flex-direction: column;
+        background-color: #1d688d;
+        position: fixed;
+        left: 0;
+        top: 60px;
+        height: calc(100% - 60px);
+        overflow-y: auto;
+        left: 100%;
+        transition: left 0.3s;
+    }
+    .navmenuitem {
+        height: 60px;
+        line-height: 60px;
+    }
+    .navmenuitem a:hover {
+        background: none;
+        color: #123d5a;
+    }
+    .navtoggle {
+        display: block;
+    }
+    .navmenuvisible {
+        left: 0;
+    }
+    .navtoggle:focus:not(:focus-visible) {
+        outline: none;
+    }
+}
